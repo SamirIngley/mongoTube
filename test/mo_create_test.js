@@ -1,8 +1,8 @@
-// CREATE
+// CREATE Tests
 const Student = require('../app/student');
 const assert = require('assert');
 
-describe('Create records', () => {
+describe('Create Tests', () => {
     it('create user in DB', () => {
         // tests should be written in such a way that never fails
         // false values fail
@@ -19,3 +19,24 @@ describe('Create records', () => {
     });// it block is exactly same as describe
 });
 
+
+// READ Tests
+describe("Read Tests", () => {
+    let reader;
+    beforeEach(done => {
+        reader = Student({name: "Reader"})
+        reader.save() // need to save to DB
+            .then(() => {
+                done(); // wait til operations are done then move on to other tests
+            })
+    })
+
+    it("Read a user: Reader", (done) => {
+        Student.find({name: "Reader"})
+            .then((students) => {
+                // id is BSON
+                assert(reader._id.toString() === students[0]._id.toString());
+                done();
+            })
+    })
+})
