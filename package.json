@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/SamirIngley/mongoTube/issues"
   },
-  "homepage": "https://github.com/SamirIngley/mongoTube#readme"
+  "homepage": "https://github.com/SamirIngley/mongoTube#readme",
+  "dependencies": {
+    "mocha": "^8.0.1",
+    "mongoose": "^5.9.25",
+    "nodemon": "^2.0.4"
+  }
 }
