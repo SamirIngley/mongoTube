@@ -1,14 +1,18 @@
 // HELPER FUNCTIONS, no tests
 
 const mongoose = require('mongoose');
+mongoose.Promise = global.Promise; // ES6 - promise
 
-mongoose.connect("mongodb://localhost/mongotube", {useNewUrlParser: true})
+before(done => { // before any test
+    mongoose.connect("mongodb://localhost/mongotube", {useNewUrlParser: true});
+    // check connection (promise)
+    mongoose.connection
+        .once('open', () => {
+            // console.log('Connected');
+            done(); // done w connection, move on to next test
+        }) // listener to open
+        .on('error', () => {
+            console.log("Error: ", error)
+        });
+});
 
-// check connection (promise)
-mongoose.connection
-    .once('open', () => console.log('Connected')) // listener to open
-    .on('error', () => {
-        console.log("Your Error: ", error)
-    });
-
-    
