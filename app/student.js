@@ -6,12 +6,12 @@ const mongoose  = require('mongoose');
 const Schema = mongoose.Schema;
 
 const StudentSchema = new Schema({
-    name: String,
+    name: String
 });
 
 // student - collection in database
 // StudentSchema - inside student, required field 
 const Student = mongoose.model('student', StudentSchema)
 
-// export so others can use student
-module.export = Student;
+// export so other files can use student
+module.exports = Student;
