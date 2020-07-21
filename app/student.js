@@ -1,5 +1,4 @@
-// SCHEMA FOR STUDENT "CLASS"
-
+// SCHEMA FOR STUDENT
 // We interact through mongoose, never just mongoDB (for our purposes)
 
 const mongoose  = require('mongoose');
