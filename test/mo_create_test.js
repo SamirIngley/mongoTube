@@ -24,7 +24,7 @@ describe('Create Tests', () => {
 describe("Read Tests", () => {
     let reader;
     beforeEach(done => {
-        reader = Student({name: "Reader"})
+        reader = new Student({name: "Reader"})
         reader.save() // need to save to DB
             .then(() => {
                 done(); // wait til operations are done then move on to other tests
@@ -38,5 +38,26 @@ describe("Read Tests", () => {
                 assert(reader._id.toString() === students[0]._id.toString());
                 done();
             })
+    })
+})
+
+
+// DELETE Tests
+describe("Delete Tests", () => {
+    let deleter;
+    beforeEach((done) => {
+        deleter = new Student({name: "Deleter"})
+        deleter.save().then(() => done());
+    });
+    
+    // referencing read test
+    it ("A delete test for deleter", () => {
+        Student.findByIdAndDelete(deleter._id) // should have been deleted here
+            .then(() => Student.findOne({ name: "Deleter" })) // let's check - if search for object, should be null 
+            .then((student) => {
+                assert(student === null);
+                done();
+            })
+            
     })
 })
