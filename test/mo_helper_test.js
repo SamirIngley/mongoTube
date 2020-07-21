@@ -16,3 +16,10 @@ before(done => { // before any test
         });
 });
 
+// drop whole collection
+beforeEach(done => {
+    mongoose.connection.collections.students.drop(() => {
+        console.log("Drop success")
+        done();
+    });
+})

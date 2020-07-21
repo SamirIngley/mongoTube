@@ -1,6 +1,5 @@
 # mongoTube
-
-MongoDB, Mocha, Mongoose, Nodemon
+## YouTube clone made with mongoDB, Mocha, Mongoose
 
 
 `npm install mocha mongoose nodemon`
