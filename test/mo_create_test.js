@@ -61,3 +61,22 @@ describe("Delete Tests", () => {
             
     })
 })
+
+// UPDATE Tests
+describe("Update Tests", () => {
+    let updater;
+    beforeEach(() => {
+        updater = new Student({name: 'Updater'})
+        updater.save()
+            .then(() => done())
+    })
+    it('Set n Save test', () => {
+        updater.set('name', "UpUpdater"); // looking for key name, want to push value UpUpdater
+        updater.save()
+            .then(() => Student.find({})) // finds all
+            .then(students => {
+                assert(students[0].name !== "Updater");
+            });
+    });
+});
+
