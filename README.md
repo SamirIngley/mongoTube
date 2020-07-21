@@ -1,10 +1,10 @@
 # mongoTube
-### YouTube clone made with mongoDB, Mocha, Mongoose
+#### YouTube clone made with mongoDB, Mocha, Mongoose
 
 Mocha: `npm run test`
 (Tests pictured below)
 
-### Requirements:
+## Requirements:
 
 - [x] Stretch: Mocha testing for all CRUD operations to the DB
 
@@ -16,5 +16,5 @@ Mocha: `npm run test`
 - [x] Built from *scratch* (you can look at tutorials, but you must build it out) 
 - [x] Uses *MongoDB* or SQL (use any ORM/ODM you like, but don’t let picking a new one hamstring your success)
 - [x] Has *~4 resources* and *~5 associations* with at least one many-to-many association
-- [ ]Style must be vanilla bootstrap
+- [x]Style must be vanilla bootstrap
 - [ ]Has authentication with username/email and password (roll you own JWT or Passport)—don’t hide your app behind a sign up page.
