@@ -1,0 +1,19 @@
+{
+  "name": "mongotube",
+  "version": "1.0.0",
+  "description": "youtube clone using mongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamirIngley/mongoTube.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SamirIngley/mongoTube/issues"
+  },
+  "homepage": "https://github.com/SamirIngley/mongoTube#readme"
+}
