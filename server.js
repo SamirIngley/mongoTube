@@ -36,7 +36,8 @@ app.get('/posts/new', (req,res) => {
     res.render('posts-new', {})
 })
  
-
+app.get('/posts/edit', (req,res) => {
+})
 
 const port = process.env.PORT || 3000;
 
